@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Values:</strong>
+  <%= @standard_deviation.values %>
+</p>
+
+<p>
+  <strong>Result:</strong>
+  <%= @standard_deviation.result %>
+</p>
+
+<%= link_to 'Edit', edit_standard_deviation_path(@standard_deviation) %> |
+<%= link_to 'Back', standard_deviations_path %>

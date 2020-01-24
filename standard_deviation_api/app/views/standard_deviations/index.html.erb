@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Standard Deviations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Values</th>
+      <th>Result</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @standard_deviations.each do |standard_deviation| %>
+      <tr>
+        <td><%= standard_deviation.values %></td>
+        <td><%= standard_deviation.result %></td>
+        <td><%= link_to 'Show', standard_deviation %></td>
+        <td><%= link_to 'Edit', edit_standard_deviation_path(standard_deviation) %></td>
+        <td><%= link_to 'Destroy', standard_deviation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Standard Deviation', new_standard_deviation_path %>

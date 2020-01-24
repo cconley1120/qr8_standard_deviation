@@ -1,0 +1,27 @@
+<%= form_with(model: standard_deviation, local: true) do |form| %>
+  <% if standard_deviation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(standard_deviation.errors.count, "error") %> prohibited this standard_deviation from being saved:</h2>
+
+      <ul>
+      <% standard_deviation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :values %>
+    <%= form.text_field :values %>
+  </div>
+
+  <div class="field">
+    <%= form.label :result %>
+    <%= form.text_field :result %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
